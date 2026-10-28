@@ -85,8 +85,7 @@ def page(path, title, desc, body, active="", schema=None, extra_js="", robots="i
 <meta property="og:title" content="{esc(title)}">
 <meta property="og:description" content="{esc(desc)}">
 <meta property="og:url" content="{canon}">
-<meta property="og:image" content="{BASE_URL}assets/img/og.png">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#0E5E4F">
 <meta name="google-adsense-account" content="ca-pub-6620975821265271">
 <link rel="icon" href="{R}assets/img/favicon.svg" type="image/svg+xml">
@@ -299,7 +298,6 @@ if __name__ == "__main__":
     os.makedirs(os.path.join(ROOT, "assets/img"), exist_ok=True)
     open(os.path.join(ROOT, "assets/img/favicon.svg"), "w").write(FAVICON)
     open(os.path.join(ROOT, "assets/img/logo.svg"), "w").write(FAVICON)
-    make_og(os.path.join(ROOT, "assets/img/og.png"))
     json.dump({"name": "Nirog.com", "short_name": "Nirog", "start_url": "./index.html", "display": "standalone",
                "background_color": "#FAF7F0", "theme_color": "#0E5E4F",
                "icons": [{"src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml"}]},
